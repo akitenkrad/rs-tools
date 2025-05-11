@@ -1,0 +1,14 @@
+[package]
+edition.workspace = true
+license.workspace = true
+name = "wordcloud"
+publish.workspace = true
+version = "0.1.0"
+
+[dependencies]
+lazy_static.workspace = true
+regex.workspace = true
+wordcloud-rs.workspace = true
+shared.workspace = true
+tracing.workspace = true
+rand.workspace = true

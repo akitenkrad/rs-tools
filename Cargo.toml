@@ -1,0 +1,38 @@
+[package]
+edition.workspace = true
+license.workspace = true
+name = "tools"
+publish.workspace = true
+version = "1.0.0"
+
+[workspace]
+members = ["shared", "wordcloud"]
+
+[[bin]]
+name = "tools"
+path = "src/bin/app.rs"
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+publish = false
+
+[workspace.dependencies]
+anyhow = "1.0.98"
+clap = { version = "4.5.38", features = ["derive"] }
+indicatif = "0.17.11"
+lazy_static = "1.5.0"
+regex = "1.11.1"
+tracing = { version = "0.1.41", features = ["log"] }
+tracing-subscriber = { version = "0.3.18", features = ["env-filter", "json"] }
+wordcloud = { path = "wordcloud" }
+wordcloud-rs = "0.1.17"
+thiserror = "2.0.12"
+shared = { path = "shared" }
+rand = "0.9.1"
+
+[dependencies]
+clap.workspace = true
+tracing.workspace = true
+wordcloud.workspace = true
+shared.workspace = true
